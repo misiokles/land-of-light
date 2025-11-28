@@ -1,0 +1,46 @@
+{
+	"name" : "land-of-light-creatures",
+	"description" : "Adds new Creatures",
+	"author" : "Luckiplus",
+	"version" : "1.0",
+	"contact" : "My E-mail:782960264@qq.com",
+	"modType" : "Creatures",
+	"chinese" : {
+		"name" : "光之国生物",
+		"description" : "光之国生物子mod，添加了新的生物。"
+	},
+	"creatures" :
+	[
+		"config/land-of-light/creatures/ultramanace.json",
+		"config/land-of-light/creatures/ultramanjack.json",
+		"config/land-of-light/creatures/ultramantaro.json",
+		"config/land-of-light/creatures/ultramanzofy.json",
+		"config/land-of-light/creatures/ultramanlion.json",
+		"config/land-of-light/creatures/ultramanseven.json",
+		"config/land-of-light/creatures/ultramantiga.json",
+		"config/land-of-light/creatures/ultramantigared.json",
+		"config/land-of-light/creatures/ultramantigapurple.json",
+		"config/land-of-light/creatures/ultramantigadark.json",
+		"config/land-of-light/creatures/ultramanhudra.json",
+		"config/land-of-light/creatures/ultramandaram.json",
+		"config/land-of-light/creatures/ultramangaia.json",
+		"config/land-of-light/creatures/ultramanagul.json",
+		"config/land-of-light/creatures/ultramangaiaorg.json",
+		"config/land-of-light/creatures/ultramanagulorg.json"
+	],
+	"spells" :
+	[
+		"config/land-of-light/spells/ultramanmori.json",
+		"config/land-of-light/spells/ultramanbless.json",
+		"config/land-of-light/spells/ultramancurse.json",
+		"config/land-of-light/spells/ultramanearthquake.json"
+	],
+	"objects" :
+        [
+                //"config/land-of-light/creatures/dwellings"
+        ],
+	"heroes" :
+	[
+		//"config/land-of-light/creatures/campaignHeroes.json"
+	]
+}

@@ -1,0 +1,200 @@
+{
+	"core:creatureBank" :
+	{
+		"types" : 
+		{
+			"lolfissure" :
+			{
+				"name" : "Fissure of Light",
+				"aiValue" : 6000000,
+				"templates" :
+				{
+					"base" :
+					{
+						"visitableFrom" : [ "---", "-+-", "+++" ], 
+						"animation" : "land-of-light/objects/banks/maplolfissure.def",
+						"mask" : [ "VVV","VBV","VBV","VAV"]
+					}
+				},
+				"rmg" : {
+					"value"		: 2500,
+					"zoneLimit" : 1,
+					"rarity"	: 100
+				},
+				"resetParameters" : {
+					"period" : 14,
+					"visitors" : true,
+					"rewards" : true
+				},
+				"onGuardedMessage" : "A mysterious dim light seems to be guiding you to a certain place during the march. There are three statues where the dim light stops, covered by a huge pyramid light curtain. You decided to break the light curtain and explore the truth, but unexpectedly all three statues came alive!",
+				"onVisitedMessage" : "There are three destroyed statues, as if they have experienced a great war here.In a mysterious way, you learned that it seems to reopen in two weeks..",
+				"visitMode" : "once",
+				"selectMode" : "selectFirst",
+				"guardsLayout" : "creatureBankNarrow",
+				"rewards": [
+					{
+						"message" : "You sealed the Fissure of Light and gained the favor of the Power of Earth! In a mysterious way, you learned that it seems to reopen in two weeks.",
+						"appearChance":  { "min" : 0, "max" : 36 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanagul" },
+							{ "amount": 1, "type": "ultramangaia" },
+							{ "amount": 2, "type": "ultramanagulorg" },
+							{ "amount": 2, "type": "ultramangaiaorg" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 4
+							},
+							{
+								"type": "defence",
+								"amount": 4
+							},
+							{
+								"type": "spellpower",
+								"amount": 4
+							},
+							{
+								"type": "knowledge",
+								"amount": 4
+							}
+						],
+						"creatures": [ { "amount": 1, "type": "ultramangaiaorg" } ],
+						"resources": 
+						{		
+							"gold" : 20000,
+							"wood": 20,
+            				"mercury": 10,
+            				"ore": 20, 
+							"sulfur": 10,
+            				"crystal": 10,
+            				"gems": 10
+						}
+					},
+					{
+						"message" : "You sealed the Fissure of Light and gained the favor of the Power of Ocean! In a mysterious way, you learned that it seems to reopen in two weeks.",
+						"appearChance":  { "min" : 36, "max" : 72 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanagul" },
+							{ "amount": 1, "type": "ultramangaia" },
+							{ "amount": 2, "type": "ultramanagulorg" },
+							{ "amount": 2, "type": "ultramangaiaorg" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 4
+							},
+							{
+								"type": "defence",
+								"amount": 4
+							},
+							{
+								"type": "spellpower",
+								"amount": 4
+							},
+							{
+								"type": "knowledge",
+								"amount": 4
+							}
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanagulorg" } ],
+						"resources": 
+						{		
+							"gold" : 20000,
+							"wood": 20,
+            				"mercury": 10,
+            				"ore": 20, 
+							"sulfur": 10,
+            				"crystal": 10,
+            				"gems": 10
+						}
+					},
+					{
+						"message" : "You sealed the Fissure of Light and gained the Power of Earth! In a mysterious way, you learned that it seems to reopen in two weeks.",
+						"appearChance":  { "min" : 72, "max" : 86 },
+						"guards": [
+							{ "amount": 2, "type": "ultramanagul" },
+							{ "amount": 2, "type": "ultramangaia" },
+							{ "amount": 3, "type": "ultramanagulorg" },
+							{ "amount": 3, "type": "ultramangaiaorg" }
+						],
+						"artifacts": ["ultramanatf1"],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 6
+							},
+							{
+								"type": "defence",
+								"amount": 6
+							},
+							{
+								"type": "spellpower",
+								"amount": 6
+							},
+							{
+								"type": "knowledge",
+								"amount": 6
+							}
+						],
+						"resources": 
+						{		
+							"gold" : 40000,
+							"wood": 30,
+            				"mercury": 15,
+            				"ore": 30, 
+							"sulfur": 15,
+            				"crystal": 15,
+            				"gems": 15
+						}
+					},
+					{
+						"message" : "You sealed the Fissure of Light and gained the Power of Ocean! In a mysterious way, you learned that it seems to reopen in two weeks.",
+						"appearChance":  { "min" : 86, "max" : 100 },
+						"guards": [
+							{ "amount": 2, "type": "ultramanagul" },
+							{ "amount": 2, "type": "ultramangaia" },
+							{ "amount": 3, "type": "ultramanagulorg" },
+							{ "amount": 3, "type": "ultramangaiaorg" }
+						],
+						"artifacts": ["ultramanatf2"],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 6
+							},
+							{
+								"type": "defence",
+								"amount": 6
+							},
+							{
+								"type": "spellpower",
+								"amount": 6
+							},
+							{
+								"type": "knowledge",
+								"amount": 6
+							}
+						],
+						"resources": 
+						{		
+							"gold" : 40000,
+							"wood": 30,
+            				"mercury": 15,
+            				"ore": 30, 
+							"sulfur": 15,
+            				"crystal": 15,
+            				"gems": 15
+						}
+					}
+				]
+
+			}
+
+		}
+		
+
+	}
+
+}

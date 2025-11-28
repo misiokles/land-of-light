@@ -1,0 +1,75 @@
+{
+	"ultramanearthquake" : 
+	{
+		"type": "ability",
+		"name": "Cataclysm",
+		"school":
+		{
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},	
+		"targetType" : "LOCATION",
+		"level": 1,
+		"power": 1,
+		"defaultGainChance": 0, 
+		"gainChance":
+		{
+		},
+		"animation":{
+			"affect":[ "C04SPE0.def" ]
+		},
+		"flags" : {
+			"nonMagical" : true,
+			"indifferent": true
+		},
+		"targetCondition" : {
+		},
+		"sounds": {
+			"cast": "ERTHQUAK"
+		},
+		"graphics":
+		{
+		},
+		"levels" : {
+			"base":{
+				"description" : "",
+				"aiValue" : 0,
+				"power" : 1,
+				"cost" : 0,
+				"targetModifier":{"smart":true},
+				"battleEffects":{
+					"catapult":{
+						"type":"core:catapult",
+						"targetsToAttack": 3,
+						"chanceToHitKeep" : 90,
+						"chanceToHitGate" : 30,
+						"chanceToHitTower" : 50,
+						"chanceToHitWall" : 30,
+						"chanceToNormalHit" : 1,
+						"chanceToCrit" : 100
+					}
+				},
+				"range" : "x"
+			},
+			"none":
+			{	 
+			},
+			"basic":
+			{	 
+			},
+			"advanced":
+			{	
+			},
+			"expert":
+			{
+				"battleEffects":{
+					"catapult":{
+						"targetsToAttack": 8
+					}
+				}
+			}
+		}
+	}
+}

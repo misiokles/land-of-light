@@ -1,0 +1,168 @@
+{
+	"ultramantigapurple":
+	{
+		"name" :
+		{
+			"plural" : "Ultraman-Tiga-Magic",
+			"singular" : "Ultraman-Tiga-Magic"
+		},
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 80,
+		"defense" : 80,
+		"damage" :
+		{
+			 "min" : 100,
+			 "max" : 120
+		},
+		"growth" : 1,
+		"hitPoints" : 2000,
+		"speed" : 17,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/tigapurple.def",
+			"map" : "creatures/map/maptigapurple.def",
+			"iconSmall" : "creatures/iconsSmall/tigapurple_small.bmp",
+			"iconLarge" : "creatures/iconsBig/tigapurple_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attacktiga.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move":	  "LTITMOVE.wav",
+			"wince":  "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 1000
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"castLBolt":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.chainLightning",
+				"val" : 100
+			},
+			"infernoattack" :{
+				"type" : "SPELL_LIKE_ATTACK",
+				"subtype" : "spell.chainLightning",
+				"val" : 3
+			},
+			"extraAttack" :	{
+				"type" : "ADDITIONAL_ATTACK",		
+				"val" : 1
+			},
+			"doubleAttack" : {
+				"type" : "FEROCITY",
+				"val" : 1
+			},
+			"spellpower" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 2000
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_SPELL_POWER"
+				},
+				"values" : [ 2000, 2000, 2000, 3000, 3000, 3000, 3000, 4000, 4000, 4000]
+			}
+		]
+	}
+}

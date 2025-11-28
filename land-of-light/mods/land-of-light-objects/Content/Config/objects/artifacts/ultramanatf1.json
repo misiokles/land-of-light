@@ -1,0 +1,50 @@
+{
+	"ultramanatf1" :
+	{
+		"type" : ["HERO"],
+		"slot" : "MISC",
+		"class" : "SPECIAL",
+		"value" : 40000,
+		"bonuses" : [
+			{
+				"type" : "OPENING_BATTLE_SPELL",
+				"subtype" : "spell.ultramansm1",
+				"val" : 1,
+				"limiters" : [
+					"noneOf",
+					{
+						"type":"HAS_ANOTHER_BONUS_LIMITER",
+						"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.ultramanbless"]
+					}
+				]
+			},
+			{
+				"type" : "ENCHANTER",
+				"subtype" : "spell.ultramanbless",
+				"val" : 1,
+				"addInfo" : 1,
+				"limiters" : [
+					{
+						"parameters" : [ "ultramanagul" ],
+						"type" : "CREATURE_TYPE_LIMITER"
+					}
+				]
+			},
+            { 
+                "addInfo" : "creature.ultramanagul",
+				"type" : "SPECIAL_UPGRADE",
+                "subtype" : "creature.ultramanagulorg"
+            }
+		],
+		"graphics" : {
+			"image" : "land-of-light/objects/artifacts/ultramanatfm1",
+			"large" : "land-of-light/objects/artifacts/ultramanatfb1",
+			"map" : "land-of-light/objects/artifacts/ultramanatfd1.def"
+		},
+		"text" : {
+			"name" : "Esplender",
+			"description" : "{Esplender}\r\n\r\nThis relic summons [SP/20] amounts of Ultraman-Gaia for the duration of a battle (summons will fail when Ultraman-Gaia has already in your army or less than 20 SP!!!!) and allow you to upgrade Ultraman-Agul Origine to Ultraman-Agul.In addition,this relic also allow Ultraman-Agul to cast mass Light of Ocean(dispel negative spell effect and +10% HP, +5 attack,+4 defence to ally every times.Accumulative) every turn on battle.\r\n",
+			"event" : ""
+		}
+	}
+}

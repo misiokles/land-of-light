@@ -1,0 +1,222 @@
+{
+	"ultramanzofy":
+	{
+		"name" :
+		{
+			"plural" : "Ultraman-Zofy",
+			"singular" : "Ultraman-Zofy"
+		},
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 80,
+		"defense" : 80,
+		"damage" :
+		{
+			 "min" : 130,
+			 "max" : 150
+		},
+		"growth" : 1,
+		"hitPoints" : 2000,
+		"speed" : 17,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/zofy.def",
+			"map" : "creatures/map/mapzofy.def",
+			"iconSmall" : "creatures/iconsSmall/zofy_small.bmp",
+			"iconLarge" : "creatures/iconsBig/zofy_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attackzofy.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move": "WRTHMOVE.wav",
+			"wince": "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 1500
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"flying" :	{		
+				"type" : "FLYING"
+			},
+			"deathStare":{	
+				"type" : "DEATH_STARE",			
+				"subtype" : "deathStareGorgon",		
+				"val" : 100
+			},
+			"castLBolt":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype":	"spell.inferno",			
+				"val":	100
+			},
+			"extraAttack" :	{
+				"type" : "ADDITIONAL_ATTACK",		
+				"val" : 2
+			},
+			"infernoattack" :{
+				"type" : "SPELL_LIKE_ATTACK",
+				"subtype" : "spell.inferno",
+				"val" : 3
+			},
+			"castHypno":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype":	"spell.hypnotize",
+				"val":	70,						
+				"addInfo" :	3
+			},
+			"dispellH":{	
+				"type" : "SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.dispelHelpful",	
+				"val" : 100
+			},
+			"disease":{		
+				"type" : "SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.disease",		
+				"val" : 70
+			},
+			"poison":{		
+				"type" : "SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.poison",			
+				"val" : 70
+			},
+			"age" :{		
+				"type" : "SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.age",			
+				"val" : 70
+			},
+			"spellpower" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 1500
+			},
+			"magicpower" :{
+				"type" : "NEGATE_ALL_NATURAL_IMMUNITIES",
+				"subtype" : "immunityEnemyHero",
+				"val" : 0,
+				"valueType" : "BASE_NUMBER"
+			},
+			"magicpower1" :
+			{
+				"type" : "MAGIC_RESISTANCE",
+				"val" : 0,
+				"valueType" : "INDEPENDENT_MIN",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"magicpower2" :
+			{
+				"type" : "SPELL_RESISTANCE_AURA",
+				"val" : 0,
+				"valueType" : "INDEPENDENT_MIN",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_SPELL_POWER"
+				},
+				"values" : [ 1500, 1500, 1500, 2500, 2500, 2500, 2500, 3500, 3500, 3500]
+			}
+		]
+	}
+}

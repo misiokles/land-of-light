@@ -1,0 +1,289 @@
+{
+	"core:creatureBank" :
+	{
+		"types" : 
+		{
+			"lolstatue" :
+			{
+				"name" : "Statue-of-Ultra-Ancient-Warrior",
+				"aiValue" : 1000000,
+				"templates" :
+				{
+					"base" :
+
+					{
+						"visitableFrom" : [ "---", "-+-", "+++" ], 
+						"animation" : "land-of-light/objects/banks/maplolstatue.def",
+						"mask" : [ "VV","VB","VA"]
+					}
+				},
+
+				"rmg" : {
+					"value"		: 2000,
+					"zoneLimit" : 1,
+					"rarity"	: 100
+				},
+				"resetParameters" : {
+					"period" : 7,
+					"visitors" : true,
+					"rewards" : true
+				},
+				"onGuardedMessage" : "You found the Statue-of-Ultra-Ancient-Warrior, and curiosity drove you to look at it. When you touch the statue, it suddenly comes to life!",
+				"onVisitedMessage" : "This is a destroyed statue, as if it has experienced a great war here.In a mysterious way, you found out that this statue seems to be restored next week.",
+				"visitMode" : "once",
+				"selectMode" : "selectFirst",
+				"guardsLayout" : "creatureBankNarrow",
+				"rewards": [
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the favor of the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 0, "max" : 8 },
+						"guards": [
+							{ "amount": 1, "type": "ultramantigadark" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 2
+							},
+							{
+								"type": "defence",
+								"amount": 2
+							},
+							{
+								"type": "spellpower",
+								"amount": 2
+							},
+							{
+								"type": "knowledge",
+								"amount": 2
+							}
+						],
+						"spells" : [ 
+								{ 
+									"level" : 4 
+								},
+								{ 
+									"level" : 4 
+								}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the favor of the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 8, "max" : 18 },
+						"guards": [
+							{ "amount": 3, "type": "ultramantigadark" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 3
+							},
+							{
+								"type": "defence",
+								"amount": 3
+							},
+							{
+								"type": "spellpower",
+								"amount": 3
+							},
+							{
+								"type": "knowledge",
+								"amount": 3
+							}
+						],
+						"spells" : [ 
+								{ 
+									"level" : 4 
+								},
+								{ 
+									"level" : 5 
+								},
+								{ 
+									"level" : 5
+								}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 18, "max" : 24 },
+						"guards": [
+							{ "amount": 5, "type": "ultramantigadark" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramantigadark" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 3
+							},
+							{
+								"type": "defence",
+								"amount": 3
+							},
+							{
+								"type": "spellpower",
+								"amount": 3
+							},
+							{
+								"type": "knowledge",
+								"amount": 3
+							}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the favor of the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 24, "max" : 37 },
+						"guards": [
+							{ "amount": 3, "type": "ultramandaram" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 3
+							},
+							{
+								"type": "spellpower",
+								"amount": 3
+							}
+							],
+						"spells" : [ 
+								{ 
+									"level" : 3 
+								},
+								{ 
+									"level" : 3 
+								},
+								{ 
+									"level" : 3 
+								}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the favor of the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 37, "max" : 53 },
+						"guards": [
+							{ "amount": 6, "type": "ultramandaram" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 5
+							},
+							{
+								"type": "spellpower",
+								"amount": 5
+							}
+						],
+						"spells" : [ 
+								{ 
+									"level" : 4 
+								},
+								{ 
+									"level" : 3 
+								},
+								{ 
+									"level" : 4 
+								}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 53, "max" : 62 },
+						"guards": [
+							{ "amount": 8, "type": "ultramandaram" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramandaram" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 5
+							},
+							{
+								"type": "spellpower",
+								"amount": 5
+							}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the favor of the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 62, "max" : 75 },
+						"guards": [
+							{ "amount": 3, "type": "ultramanhudra" }
+						],
+						"primary": [
+							{
+								"type": "defence",
+								"amount": 3
+							},
+							{
+								"type": "knowledge",
+								"amount": 3
+							}
+							],
+						"spells" : [ 
+								{ 
+									"level" : 3 
+								},
+								{ 
+									"level" : 3 
+								},
+								{ 
+									"level" : 3 
+								}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the favor of the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 75, "max" : 91 },
+						"guards": [
+							{ "amount": 6, "type": "ultramanhudra" }
+						],
+						"primary": [
+							{
+								"type": "defence",
+								"amount": 5
+							},
+							{
+								"type": "knowledge",
+								"amount": 5
+							}
+						],
+						"spells" : [ 
+								{ 
+									"level" : 4 
+								},
+								{ 
+									"level" : 3 
+								},
+								{ 
+									"level" : 4 
+								}
+						]
+					},
+					{
+						"message" : "You have defeated the Ultra-Ancient-Warrior and obtained the power of the Ultra-Ancient-Warrior! In a mysterious way, you have learned that this statue seems to be restored next week.",
+						"appearChance":  { "min" : 91, "max" : 100 },
+						"guards": [
+							{ "amount": 8, "type": "ultramanhudra" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanhudra" } ],
+						"primary": [
+							{
+								"type": "defence",
+								"amount": 5
+							},
+							{
+								"type": "knowledge",
+								"amount": 5
+							}
+						]
+					}
+				]
+
+			}
+
+		}
+		
+
+	}
+
+}

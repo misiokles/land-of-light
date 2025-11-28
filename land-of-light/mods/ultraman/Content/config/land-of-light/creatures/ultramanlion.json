@@ -1,0 +1,178 @@
+{
+	"ultramanlion":
+	{
+		"name" :
+		{
+			"plural" : "Ultraman-Lion",
+			"singular" : "Ultraman-Lion"
+		},
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 80,
+		"defense" : 80,
+		"damage" :
+		{
+			 "min" : 150,
+			 "max" : 170
+		},
+		"growth" : 1,
+		"hitPoints" : 3000,
+		"speed" : 22,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/lion.def",
+			"map" : "creatures/map/maplion.def",
+			"iconSmall" : "creatures/iconsSmall/lion_small.bmp",
+			"iconLarge" : "creatures/iconsBig/lion_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attacklion.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move":	  "LTITMOVE.wav",
+			"wince":  "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 9999
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"shield" : 
+			{ 
+				"type" : "ENEMY_ATTACK_REDUCTION", 
+				"val" : 70 
+			},
+			"shield effect" :{
+				"type" : "GENERAL_DAMAGE_REDUCTION",
+				"subtype" : "damageTypeAll",	
+				"val" : 70  
+			},
+			"fireShield" :{		
+				"type" : "FIRE_SHIELD",				
+				"val" : 70
+			},
+			"firstStrike" :{	
+				"type" : "FIRST_STRIKE"
+			},
+			"deathStrike" :{
+				"type" : "DOUBLE_DAMAGE_CHANCE",
+				"val" : 50
+			},		
+			"castBlind":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype":	"spell.blind",
+				"val":	100,						
+				"addInfo" :	3
+			},	
+			"castparalyze":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype":	"spell.paralyze",
+				"val":	70
+			},
+			"petrify":{		
+				"type" : "SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.stoneGaze",		
+				"val" :  70
+			},
+			"unlimitedRetaliation" :{	
+				"type" : "UNLIMITED_RETALIATIONS"	
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			}
+		]
+	}
+}

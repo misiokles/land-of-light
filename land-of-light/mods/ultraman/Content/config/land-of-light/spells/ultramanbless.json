@@ -1,0 +1,95 @@
+{	
+"ultramanbless" : 
+	{
+		"type": "ability",
+		"name": "Light of Ocean",
+		"school":
+		{
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 1,
+		"targetType": "NO_TARGET",
+		"defaultGainChance": 0, 
+		"gainChance":
+		{
+		},
+		"animation":{
+			"affect":["spells/ultramanbless/ultramanblessd.def"]
+		},
+		"flags" : {
+			"positive": true
+		},
+		"targetCondition" : {
+		},
+		"sounds": {
+			"cast": "DISGUISE"
+		},
+		"graphics":
+		{
+		    "iconEffect": "spells/ultramanbless/ultramanbless.bmp"
+		},
+		"levels" : {
+			"base":{
+				"cost": 1, 
+				"description": "",
+				"power": 1,
+				"aiValue": 70,
+				"range" : "x",
+				"targetModifier":{"smart":true},
+				"battleEffects":{
+					"timed":{
+						"type":"core:timed",
+						"cumulative":true,
+						"ignoreImmunity" : true,
+						"bonus" :{
+							"primaryskill" : {
+								"val" : 4,
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "primarySkill.defence",
+								"duration" : "PERMANENT",
+								"valueType" : "ADDITIVE_VALUE"
+							},
+							"primaryskill2" : {
+								"val" : 5,
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "primarySkill.attack",
+								"duration" : "PERMANENT",
+								"valueType" : "ADDITIVE_VALUE"
+							},
+							"stackhealth" : {
+						        "val" : 10,
+						        "type" : "STACK_HEALTH",
+					    	    "valueType" : "PERCENT_TO_ALL",
+					    	    "duration" : "PERMANENT"
+					        }
+						}
+					},
+					"cure":{
+						"type":"core:dispel",
+						"indirect": true,
+						"optional":true,
+						"dispelNegative":true,
+						"dispelNeutral":false,
+						"dispelPositive":false
+					}
+				}
+			},
+			"none":
+			{	
+			},
+			"basic":
+			{	
+			},
+			"advanced":
+			{	 
+			},
+			"expert":
+			{
+			}
+		}
+	}
+}

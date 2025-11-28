@@ -1,0 +1,16 @@
+{
+	"name" : "Land-of-light",
+	"description" : "Land-of-light mod, you can meet with many Ultramen from The M78 Nebula",
+	"author" : "Luckiplus",
+	"version" : "1.0",
+	"contact" : "My E-mail:782960264@qq.com",
+	"modType" : "Expansion",
+	"chinese" : {
+		"name" : "光之国",
+		"description" : "光之国扩展。",
+		"translations" : [
+			"config/translation/land-of-light/chinese.json"
+		]
+	},
+	"depends" : ["vcmi"]
+}

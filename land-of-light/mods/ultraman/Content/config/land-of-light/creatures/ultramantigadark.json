@@ -1,0 +1,171 @@
+{
+	"ultramantigadark":
+	{
+		"name" :
+		{
+			"plural" : "Ultra-Ancient-Warrior-Tiga",
+			"singular" : "Ultra-Ancient-Warrior-Tiga"
+		},
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 80,
+		"defense" : 80,
+		"damage" :
+		{
+			 "min" : 150,
+			 "max" : 170
+		},
+		"growth" : 1,
+		"hitPoints" : 2000,
+		"speed" : 17,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/tigadark.def",
+			"map" : "creatures/map/maptigadark.def",
+			"iconSmall" : "creatures/iconsSmall/tigadark_small.bmp",
+			"iconLarge" : "creatures/iconsBig/tigadark_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attacktiga.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move":	  "LTITMOVE.wav",
+			"wince":  "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 1500
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"extraAttack" :	{
+				"type" : "ADDITIONAL_ATTACK",		
+				"val" : 1
+			},
+			"doubleAttack" : {
+				"type" : "FEROCITY",
+				"val" : 2
+			},
+			"Jousting": { 
+				"type" : "JOUSTING", 
+				"val":20
+			},
+			"reduceDefence" :{
+				"type" : "ENEMY_DEFENCE_REDUCTION",
+				"val" : 100
+			},
+			"revenger" :{
+				"type" : "REVENGE"
+			},
+			"deathStrike" :{
+				"type" : "DOUBLE_DAMAGE_CHANCE",
+				"val" : 70
+			},
+			"decimation" :{
+				"type" : "DESTRUCTION",
+				"subtype" : "destructionKillPercentage",
+				"val" : 70,
+				"addInfo" :40
+			},
+			"drainsLife" :{
+				"type" : "LIFE_DRAIN",
+				"val" : 100
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			}
+		]
+	}
+}

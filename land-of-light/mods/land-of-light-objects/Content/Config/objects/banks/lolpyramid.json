@@ -1,0 +1,193 @@
+{
+	"core:creatureBank" :
+	{
+		"types" : 
+		{
+			"lolpyramid" :
+			{
+				"name" : "Ultra-Ancient-Pyramid",
+				"aiValue" : 600000,
+				"templates" :
+				{
+					"base" :
+
+					{
+						"visitableFrom" : [ "---", "-+-", "+++" ], 
+						"animation" : "land-of-light/objects/banks/maplolpyramid.def",
+						"mask" : [ "VVVVVV","VVVVVV","VVVBBV","VVBBBB","VVVABV"]
+					}
+				},
+
+				"rmg" : {
+					"value"		: 2500,
+					"zoneLimit" : 1,
+					"rarity"	: 100
+				},
+				"resetParameters" : {
+					"period" : 7,
+					"rewards" : true
+				},
+				"onGuardedMessage" : "A mysterious dim light seems to be guiding you to a certain place during the march. There are three statues where the dim light stops, covered by a huge pyramid light curtain. You decided to break the light curtain and explore the truth, but unexpectedly all three statues came alive!",
+				"onVisitedMessage" : "There are three destroyed statues, as if they have experienced a great war here.In a mysterious way, you found out that this pyramid seems to be restored next week.",
+				"visitMode" : "once",
+				"selectMode" : "selectFirst",
+				"guardsLayout" : "creatureBankNarrow",
+				"rewards": [
+					{
+						"message" : "You defeated Ultraman-Tiga and gained a portion of his power!In a mysterious way, you found out that this pyramid seems to be restored next week.",
+						"appearChance":  { "min" : 0, "max" : 25 },
+						"guards": [
+							{ "amount": 1, "type": "ultramantigared" },
+							{ "amount": 1, "type": "ultramantiga" },
+							{ "amount": 1, "type": "ultramantigapurple" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 5
+							},
+							{
+								"type": "defence",
+								"amount": 5
+							},
+							{
+								"type": "spellpower",
+								"amount": 5
+							},
+							{
+								"type": "knowledge",
+								"amount": 5
+							}
+						],
+						"artifacts": [
+							{ "class" : "MINOR" },
+							{ "class" : "MINOR" },
+							{ "class" : "MINOR" }
+						]
+					},
+					{
+						"message" : "You defeated Ultraman-Tiga and gained a portion of his power!In a mysterious way, you found out that this pyramid seems to be restored next week.",
+						"appearChance":  { "min" : 25, "max" : 50 },
+						"guards": [
+							{ "amount": 2, "type": "ultramantigared" },
+							{ "amount": 2, "type": "ultramantiga" },
+							{ "amount": 2, "type": "ultramantigapurple" }
+						],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 9
+							},
+							{
+								"type": "defence",
+								"amount": 9
+							},
+							{
+								"type": "spellpower",
+								"amount": 9
+							},
+							{
+								"type": "knowledge",
+								"amount": 9
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" },
+							{ "class" : "MINOR" }
+						]
+					},
+					{
+						"message" : "You defeated Ultraman-Tiga and gained his recognition! He has decided to join you on your adventure.In a mysterious way, you found out that this pyramid seems to be restored next week.",
+						"appearChance":  { "min" : 50, "max" : 68 },
+						"guards": [
+							{ "amount": 3, "type": "ultramantigared" },
+							{ "amount": 2, "type": "ultramantiga" },
+							{ "amount": 2, "type": "ultramantigapurple" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramantigared" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 7
+							},
+							{
+								"type": "defence",
+								"amount": 8
+							},
+							{
+								"type": "spellpower",
+								"amount": 7
+							},
+							{
+								"type": "knowledge",
+								"amount": 8
+							}
+						]
+					},
+					{
+						"message" : "You defeated Ultraman-Tiga and gained his recognition! He has decided to join you on your adventure.In a mysterious way, you found out that this pyramid seems to be restored next week.",
+						"appearChance":  { "min" : 68, "max" : 86 },
+						"guards": [
+							{ "amount": 3, "type": "ultramantigared" },
+							{ "amount": 2, "type": "ultramantiga" },
+							{ "amount": 2, "type": "ultramantigapurple" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramantigapurple" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 8
+							},
+							{
+								"type": "defence",
+								"amount": 7
+							},
+							{
+								"type": "spellpower",
+								"amount": 8
+							},
+							{
+								"type": "knowledge",
+								"amount": 7
+							}
+						]
+					},
+					{
+						"message" : "You defeated Ultraman-Tiga and gained his recognition! He has decided to join you on your adventure.In a mysterious way, you found out that this pyramid seems to be restored next week.",
+						"appearChance":  { "min" : 86, "max" : 100 },
+						"guards": [
+							{ "amount": 2, "type": "ultramantigared" },
+							{ "amount": 3, "type": "ultramantiga" },
+							{ "amount": 2, "type": "ultramantigapurple" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramantiga" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 8
+							},
+							{
+								"type": "defence",
+								"amount": 8
+							},
+							{
+								"type": "spellpower",
+								"amount": 8
+							},
+							{
+								"type": "knowledge",
+								"amount": 8
+							}
+						]
+					}
+				]
+
+			}
+
+		}
+		
+
+	}
+
+}

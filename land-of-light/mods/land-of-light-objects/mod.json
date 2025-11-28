@@ -1,0 +1,38 @@
+{
+	"name" : "Land-of-light-objects",
+	"description" : "Adds new Banks and new artifacts",
+	"author" : "Luckiplus",
+	"version" : "1.0",
+	"contact" : "My E-mail:782960264@qq.com",
+	"modType" : "Objects",
+	"language": "chinese",
+	"chinese" : {
+		"name" : "光之国地图物体",
+		"description" : "光之国地图物体子mod，添加了新的生物银行,新的宝物。"
+	},
+    "depends" :
+        [
+        	"land-of-light.ultraman"
+        ],
+	"artifacts":
+    [              
+		"config/objects/artifacts/ultramanatf1.json",
+		"config/objects/artifacts/ultramanatf2.json"
+	],
+	"spells":
+    [              
+		"config/objects/spells/ultramansm1.json",
+		"config/objects/spells/ultramansm2.json"
+	],
+	"objects":
+        [
+			"config/objects/banks/lolarena.json",
+			"config/objects/banks/lolstatue.json",
+			"config/objects/banks/lolpyramid.json",
+			"config/objects/banks/lolfissure.json"
+        ]     
+}
+
+
+
+

@@ -1,0 +1,230 @@
+{
+	"ultramangaiaorg":
+	{
+		"name" :
+		{
+			"plural" : "Ultraman-Gaia Origine",
+			"singular" : "Ultraman-Gaia Origine"
+		},
+		"description" : "{Extra Effect}\r\nDuring battle, reduces enemy creatures' Attack, Defense, HP, Speed, and Damage by 10%.",
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 50,
+		"defense" : 50,
+		"damage" :
+		{
+			 "min" : 75,
+			 "max" : 95
+		},
+		"growth" : 1,
+		"hitPoints" : 1200,
+		"speed" : 17,
+		"fightValue" : 88899,
+		"aiValue" :66500,
+		"cost" :
+		{
+			"gold" : 60000,
+			"wood": 8,
+            "mercury": 7,
+            "ore": 8, 
+			"sulfur": 7,
+            "crystal": 7,
+            "gems": 7
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/gaiaorg.def",
+			"map" : "creatures/map/mapgaiaorg.def",
+			"iconSmall" : "creatures/iconsSmall/gaiaorg_small.bmp",
+			"iconLarge" : "creatures/iconsBig/gaiaorg_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			},
+			"missile" :
+			{
+				"projectile": "PCYCLBX.DEF",
+				"attackClimaxFrame" : 12,
+				"offset" :
+				{
+					"upperX" : 8,
+					"upperY" : -38,
+					"middleX" :10,
+					"middleY" : -34,
+					"lowerX" : 1,
+					"lowerY" : -25
+				},
+				"frameAngles" : [ 90, 72, 45, 27, 0, -27, -45, -72, -90 ]
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attackgaia.wav",
+			"shoot": "land-of-light/attackgaia.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move": "LTITMOVE.wav",
+			"wince": "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 1000
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"casts" :
+			{
+				"type" : "CASTS",
+				"val" : 100,
+				"valueType" : "INDEPENDENT_MAX"
+			},
+			"castearthquake" :
+			{
+				"type" : "CATAPULT",
+				"subtype" : "spell.ultramanearthquake",
+				"val" : 0
+			},
+			"earthimmune":
+			{ 
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.earth",
+				"val" : 100
+			},
+			"debuff1":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE"],
+				"type" : "STACKS_SPEED", 
+				"val" : -10,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff2":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"subtype" : "defence",
+				"type" : "PRIMARY_SKILL",
+				"val" : -10,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff3":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"subtype" : "attack",
+				"type" : "PRIMARY_SKILL",
+				"val" : -10,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff4":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"type" : "STACK_HEALTH",
+				"val" : -10,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff5":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"type" : "CREATURE_DAMAGE",
+				"subtype" : "creatureDamageMax",
+				"val" : -10,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff6":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"type" : "CREATURE_DAMAGE",
+				"subtype" : "creatureDamageMin",
+				"val" : -10,
+				"valueType" : "PERCENT_TO_BASE"
+			}
+		},
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			}
+		]
+	}
+}

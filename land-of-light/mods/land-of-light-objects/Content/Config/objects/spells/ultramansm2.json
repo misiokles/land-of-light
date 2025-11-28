@@ -1,0 +1,69 @@
+{
+	"ultramansm2" :
+	{
+		"name" : "Summon Ultraman-Agul",
+		"type" : "ability",
+		"school" :
+		{
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 5,
+		"power" : 20,
+		"defaultGainChance" : 0,
+		"gainChance" :
+		{
+		},
+		"flags" : {
+			"indifferent" : true,
+			"special" : true
+		},
+		"graphics" :
+		{
+		},
+		"animation" :
+		{
+		},
+		"sounds" :
+		{
+			"cast" : "SUMNELM"
+		},
+		"targetType" : "NO_TARGET",
+		"levels" :
+		{
+			"base" :
+			{
+				"description" : "{Summon Ultraman-Agul}\r\n\r\nSummons Ultraman-Agul at the beginning of the battle.",
+				"power" : 100,
+				"aiValue" : 10,
+				"cost" : 0,
+				"range" : "X",
+				"targetModifier" :{"smart" :true},
+				"battleEffects" :{
+					"summon" :{
+						"exclusive" :false,
+						"id" :"ultramanagul",
+						"permanent" :false,
+						"summonByHealth" : true,
+						"type" :"core:summon",
+						"maxFullUnits" : 5
+					}
+				}
+			},
+			"none" :
+			{
+			},
+			"basic" :
+			{
+			},
+			"advanced" :
+			{
+			},
+			"expert" :
+			{
+			}
+		}
+	}
+}

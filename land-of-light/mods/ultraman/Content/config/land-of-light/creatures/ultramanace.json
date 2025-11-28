@@ -1,0 +1,200 @@
+{
+	"ultramanace":
+	{
+		"name" :
+		{
+			"plural" : "Ultraman-Ace",
+			"singular" : "Ultraman-Ace"
+		},
+		"description" : "{Extra Effect}\r\nRemoves magic resistance and spell immunity from all enemy creatures.Furthermore, they will receive 50% additional damage from all offensive spells",
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 70,
+		"defense" : 70,
+		"damage" :
+		{
+			 "min" : 130,
+			 "max" : 150
+		},
+		"growth" : 1,
+		"hitPoints" : 1800,
+		"speed" : 17,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/ace.def",
+			"map" : "creatures/map/mapace.def",
+			"iconSmall" : "creatures/iconsSmall/ace_small.bmp",
+			"iconLarge" : "creatures/iconsBig/ace_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attckace.wav",
+			"defend": "land-of-light/defendace.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move": "LTITMOVE.wav",
+			"wince": "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 900
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"reduceSpellCost" : {
+				"type" : "CHANGES_SPELL_COST_FOR_ALLY",
+				"val" :  100
+			},
+			"casts" :
+			{
+				"type" : "CASTS",
+				"val" : 99,
+				"valueType" : "INDEPENDENT_MAX"
+			},
+			"magicpower" :{
+				"type" : "NEGATE_ALL_NATURAL_IMMUNITIES",
+				"subtype" : "immunityEnemyHero",
+				"val" : 0,
+				"valueType" : "BASE_NUMBER"
+			},
+			"magicpower1" :
+			{
+				"type" : "MAGIC_RESISTANCE",
+				"val" : 0,
+				"valueType" : "INDEPENDENT_MIN",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"magicpower2" :
+			{
+				"type" : "SPELL_RESISTANCE_AURA",
+				"val" : 0,
+				"valueType" : "INDEPENDENT_MIN",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"magicpowerenemy" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"val" : -50,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"spellpower" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 1500
+			},
+			"armageddon":
+			{
+				"type" : "ENCHANTER",
+				"subtype": "spell.ultramanmori",
+				"val" : 3,
+				"addInfo" : 1
+			}
+		},
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_SPELL_POWER"
+				},
+				"values" : [ 1500, 1500, 1500, 2500, 2500, 2500, 2500, 3500, 3500, 3500]
+			}
+		]
+	}
+}

@@ -1,0 +1,307 @@
+{
+	"ultramanagul":
+	{
+		"name" :
+		{
+			"plural" : "Ultraman-Agul",
+			"singular" : "Ultraman-Agul"
+		},
+		"description" : "{Extra Effect}\r\nAll allied creatures (including heroes and towns) gain 50% resistance to Water Magic damage; during battle, increase allied creatures' Attack, Defense, HP, Speed, and Damage by 15%.",
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 80,
+		"defense" : 80,
+		"damage" :
+		{
+			 "min" : 130,
+			 "max" : 160
+		},
+		"growth" : 1,
+		"hitPoints" : 2000,
+		"speed" : 23,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/agul.def",
+			"map" : "creatures/map/mapagul.def",
+			"iconSmall" : "creatures/iconsSmall/agul_small.bmp",
+			"iconLarge" : "creatures/iconsBig/agul_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			},
+			"missile" :
+			{
+				"projectile": "PCYCLBX.DEF",
+				"attackClimaxFrame" : 12,
+				"offset" :
+				{
+					"upperX" : 8,
+					"upperY" : -38,
+					"middleX" :10,
+					"middleY" : -34,
+					"lowerX" : 1,
+					"lowerY" : -25
+				},
+				"frameAngles" : [ 90, 72, 45, 27, 0, -27, -45, -72, -90 ]
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attckagul.wav",
+			"shoot": "land-of-light/attckagul.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "land-of-light/deathjack.wav",
+			"move": "LTITMOVE.wav",
+			"wince": "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 1000
+			},
+			"HPregenerate1" : {
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "noneOf","OPPOSITE_SIDE" ],
+				"type" : "HP_REGENERATION",
+				"val" : 500
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"casts" :
+			{
+				"type" : "CASTS",
+				"val" : 100,
+				"valueType" : "INDEPENDENT_MAX"
+			},
+			"castsMisfortune" :
+			{
+				"type" : "ENCHANTED",
+				"subtype" : "spell.cure",
+				"val" : 1
+			},
+			"waterimmune":
+			{ 
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.water",
+				"val" : 50
+			},
+			"nocast":
+			{
+				"type": "CASTS",
+				"val" : 0,
+				"valueType" : "INDEPENDENT_MIN",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"]
+			},
+			"debuff1":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"type" : "STACKS_SPEED", 
+				"val" : -15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff2":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ],
+				"subtype" : "defence",
+				"type" : "PRIMARY_SKILL",
+				"val" : -15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff3":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"subtype" : "attack",
+				"type" : "PRIMARY_SKILL",
+				"val" : -15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff4":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE" ],
+				"type" : "STACK_HEALTH",
+				"val" : -15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff5":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE" ],
+				"type" : "CREATURE_DAMAGE",
+				"subtype" : "creatureDamageMax",
+				"val" : -15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff6":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : ["OPPOSITE_SIDE"],
+				"type" : "CREATURE_DAMAGE",
+				"subtype" : "creatureDamageMin",
+				"val" : -15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"buff1":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"type" : "STACKS_SPEED", 
+				"val" : 15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"buff2":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"subtype" : "defence",
+				"type" : "PRIMARY_SKILL",
+				"val" : 15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"buff3":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"subtype" : "attack",
+				"type" : "PRIMARY_SKILL",
+				"val" : 15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"buff4":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"type" : "STACK_HEALTH",
+				"val" : 15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"buff5":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"type" : "CREATURE_DAMAGE",
+				"subtype" : "creatureDamageMax",
+				"val" : 15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"buff6":
+			{ 
+				"propagator": "BATTLE_WIDE",
+				"type" : "CREATURE_DAMAGE",
+				"subtype" : "creatureDamageMin",
+				"val" : 15,
+				"valueType" : "PERCENT_TO_BASE"
+			},
+			"debuff7":
+			{ 
+				"propagator": "PLAYER_PROPAGATOR",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.water",
+				"val" : 50
+			},
+			"hook" :
+			{
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype" : "spell.ultramancurse",
+				"propagator":"HERO",
+				"val" : 0
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			}
+		]
+	}
+}

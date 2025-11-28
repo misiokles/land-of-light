@@ -1,0 +1,50 @@
+{
+	"ultramanatf2" :
+	{
+		"type" : ["HERO"],
+		"slot" : "MISC",
+		"class" : "SPECIAL",
+		"value" : 40000,
+		"bonuses" : [
+			{
+				"type" : "OPENING_BATTLE_SPELL",
+				"subtype" : "spell.ultramansm2",
+				"val" : 1,
+				"limiters" : [
+					"noneOf",
+					{
+						"type":"HAS_ANOTHER_BONUS_LIMITER",
+						"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.ultramancurse"]
+					}
+				]
+			},
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.ultramancurse",
+				"val" : 100,
+				"addInfo" : [3,0],
+				"limiters" : [
+					{
+						"parameters" : ["ultramangaia"],
+						"type" : "CREATURE_TYPE_LIMITER"
+					}
+				]
+			},
+            { 
+                "addInfo" : "creature.ultramangaia",
+				"type" : "SPECIAL_UPGRADE",
+                "subtype" : "creature.ultramangaiaorg" 
+            }
+		],
+		"graphics" : {
+			"image" : "land-of-light/objects/artifacts/ultramanatfm2",
+			"large" : "land-of-light/objects/artifacts/ultramanatfb2",
+			"map" : "land-of-light/objects/artifacts/ultramanatfd2.def"
+		},
+		"text" : {
+			"name" : "Agulator",
+			"description" : "{Agulator}\r\n\r\nThis relic summons [SP/20] amounts of Ultraman-Agul for the duration of a battle (summons will fail when Ultraman-Agul has already in your army or less than 20 SP!!!!) and allow you to upgrade Ultraman-Gaia Origine to Ultraman-Gaia.In addition,this relic also allow Ultraman-Gaia to cast mass Light of Earth(-7% HP, -5 attack,-4 defence to enemy every times.Accumulative) before attack on battle.\r\n",
+			"event" : ""
+		}
+	}
+}

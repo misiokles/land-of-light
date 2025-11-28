@@ -1,0 +1,179 @@
+{
+	"ultramandaram":
+	{
+		"name" :
+		{
+			"plural" : "Ultra-Ancient-Warrior-Darramb",
+			"singular" : "Ultra-Ancient-Warrior-Darramb"
+		},
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 50,
+		"defense" : 50,
+		"damage" :
+		{
+			 "min" : 75,
+			 "max" : 90
+		},
+		"growth" : 1,
+		"hitPoints" : 1500,
+		"speed" : 18,
+		"fightValue" : 77899,
+		"aiValue" :55500,
+		"cost" :
+		{
+			"gold" : 40000,
+			"wood": 10,
+            "mercury": 4,
+            "ore": 10, 
+			"sulfur": 4,
+            "crystal": 4,
+            "gems": 4
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/daram.def",
+			"map" : "creatures/map/mapdaram.def",
+			"iconSmall" : "creatures/iconsSmall/daram_small.bmp",
+			"iconLarge" : "creatures/iconsBig/daram_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attackdaram.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "LTITKILL.wav",
+			"move":	  "LTITMOVE.wav",
+			"wince":  "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 1400
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 4
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"shield" : 
+			{ 
+				"type" : "ENEMY_ATTACK_REDUCTION", 
+				"val" : 25 
+			},
+			"shield effect" :{
+				"type" : "GENERAL_DAMAGE_REDUCTION",
+				"subtype" : "damageTypeAll",	
+				"val" : 30  
+			},
+			"fireShield" :{		
+				"type" : "FIRE_SHIELD",				
+				"val" : 50
+			},
+			"firstStrike" :{	
+				"type" : "FIRST_STRIKE"
+			},
+			"deathStrike" :{
+				"type" : "DOUBLE_DAMAGE_CHANCE",
+				"val" : 50
+			},		
+			"castBlind":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype":	"spell.blind",
+				"val":	40,						
+				"addInfo" :	3
+			},	
+			"castparalyze":{	
+				"type":	"SPELL_AFTER_ATTACK",	
+				"subtype":	"spell.paralyze",
+				"val":	40
+			},
+			"petrify":{		
+				"type" : "SPELL_AFTER_ATTACK",	
+				"subtype" : "spell.stoneGaze",		
+				"val" :  40
+			},
+			"addtionalRetaliation" :{	
+				"type" : "ADDITIONAL_RETALIATION",
+				"val" : 2
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			}
+		]
+	}
+}

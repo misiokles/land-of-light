@@ -1,0 +1,262 @@
+{
+	"core:creatureBank" :
+ 
+	{
+
+		"types" :
+ 
+		{
+			"lolarena" :
+			{
+
+				"name" : "Land-of-light of arena",
+				"aiValue" : 800000,
+
+				"templates" :
+
+				{
+
+					"base" :
+
+					{
+
+						"animation" : "land-of-light/objects/banks/maplolarena.def",
+
+						"visitableFrom" : [ "---", "-+-", "+++" ],
+ 
+						"mask" : [ "VVVVVV","VVVVVV", "VVVBBB", "VVVBAB"],
+						"allowedTerrains":["grass","sand","rough","snow","dirt","subterra","swamp"]
+ 
+					}
+				},
+
+				"rmg" : {
+					"value"		: 8000,
+					"zoneLimit" : 1,
+					"rarity"	: 100
+				},
+				"resetParameters" : {
+					"period" : 21,
+					"rewards" : true
+				},
+				"onGuardedMessage" : "This is the Ultraman Arena of the Land of Light. You are about to face the trials from the six Ultraman brothers. Defeat them to gain their recognition.  Are you ready to undergo this week's trials?",
+				"onVisitedMessage" : "You learn from the Ultraman signature on the wall that someone has already passed the trials of the six Ultraman brothers before you, and trials will restart next three weeks",
+				"visitMode" : "once",
+				"selectMode" : "selectFirst",
+				"guardsLayout" : "creatureBankNarrow",
+				"rewards": [
+					{
+						"message" : "After the trials, you gained the recognition of Ultraman-Ace, and he decided to join you on your adventure.",
+						"appearChance":  { "min" : 0, "max" : 16 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanace" },
+							{ "amount": 1, "type": "ultramanjack" },
+							{ "amount": 1, "type": "ultramantaro" },
+							{ "amount": 1, "type": "ultramanzofy" },
+							{ "amount": 1, "type": "ultramanlion" },
+							{ "amount": 1, "type": "ultramanseven" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanace" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 12
+							},
+							{
+								"type": "defence",
+								"amount": 12
+							},
+							{
+								"type": "spellpower",
+								"amount": 12
+							},
+							{
+								"type": "knowledge",
+								"amount": 12
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" }
+						]
+					},
+					{
+						"message" : "After the trials, you gained the recognition of Ultraman-Jack, and he decided to join you on your adventure.",
+						"appearChance":  { "min" : 16, "max" : 34 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanace" },
+							{ "amount": 1, "type": "ultramanjack" },
+							{ "amount": 1, "type": "ultramantaro" },
+							{ "amount": 1, "type": "ultramanzofy" },
+							{ "amount": 1, "type": "ultramanlion" },
+							{ "amount": 1, "type": "ultramanseven" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanjack" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 12
+							},
+							{
+								"type": "defence",
+								"amount": 12
+							},
+							{
+								"type": "spellpower",
+								"amount": 12
+							},
+							{
+								"type": "knowledge",
+								"amount": 12
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" }
+						]
+					},
+					{
+						"message" : "After the trials, you gained the recognition of Ultraman-Taro, and he decided to join you on your adventure.",
+						"appearChance":  { "min" : 34, "max" : 50 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanace" },
+							{ "amount": 1, "type": "ultramanjack" },
+							{ "amount": 1, "type": "ultramantaro" },
+							{ "amount": 1, "type": "ultramanzofy" },
+							{ "amount": 1, "type": "ultramanlion" },
+							{ "amount": 1, "type": "ultramanseven" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramantaro" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 12
+							},
+							{
+								"type": "defence",
+								"amount": 12
+							},
+							{
+								"type": "spellpower",
+								"amount": 12
+							},
+							{
+								"type": "knowledge",
+								"amount": 12
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" }
+						]
+					},
+					{
+						"message" : "After the trials, you gained the recognition of Ultraman-Zofy, and he decided to join you on your adventure.",
+						"appearChance":  { "min" : 50, "max" : 68 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanace" },
+							{ "amount": 1, "type": "ultramanjack" },
+							{ "amount": 1, "type": "ultramantaro" },
+							{ "amount": 1, "type": "ultramanzofy" },
+							{ "amount": 1, "type": "ultramanlion" },
+							{ "amount": 1, "type": "ultramanseven" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanzofy" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 12
+							},
+							{
+								"type": "defence",
+								"amount": 12
+							},
+							{
+								"type": "spellpower",
+								"amount": 12
+							},
+							{
+								"type": "knowledge",
+								"amount": 12
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" }
+						]
+					},
+					{
+						"message" : "After the trials, you gained the recognition of Ultraman-Lion, and he decided to join you on your adventure.",
+						"appearChance":  { "min" : 68, "max" : 84 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanace" },
+							{ "amount": 1, "type": "ultramanjack" },
+							{ "amount": 1, "type": "ultramantaro" },
+							{ "amount": 1, "type": "ultramanzofy" },
+							{ "amount": 1, "type": "ultramanlion" },
+							{ "amount": 1, "type": "ultramanseven" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanlion" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 12
+							},
+							{
+								"type": "defence",
+								"amount": 12
+							},
+							{
+								"type": "spellpower",
+								"amount": 12
+							},
+							{
+								"type": "knowledge",
+								"amount": 12
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" }
+						]
+					},
+					{
+						"message" : "After the trials, you gained the recognition of Ultraman-Seven, and he decided to join you on your adventure.",
+						"appearChance":  { "min" : 84, "max" : 100 },
+						"guards": [
+							{ "amount": 1, "type": "ultramanace" },
+							{ "amount": 1, "type": "ultramanjack" },
+							{ "amount": 1, "type": "ultramantaro" },
+							{ "amount": 1, "type": "ultramanzofy" },
+							{ "amount": 1, "type": "ultramanlion" },
+							{ "amount": 1, "type": "ultramanseven" }
+						],
+						"creatures": [ { "amount": 1, "type": "ultramanseven" } ],
+						"primary": [
+							{
+								"type": "attack",
+								"amount": 12
+							},
+							{
+								"type": "defence",
+								"amount": 12
+							},
+							{
+								"type": "spellpower",
+								"amount": 12
+							},
+							{
+								"type": "knowledge",
+								"amount": 12
+							}
+						],
+						"artifacts": [
+							{ "class" : "TREASURE" },
+							{ "class" : "TREASURE" }
+						]
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"ultramanmori" : {
+		"type": "ability",
+		"name": "Judgement of Light",
+		"school":
+		{
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"targetType": "NO_TARGET",
+		"level": 5,
+		"power": 25,
+		"defaultGainChance": 0, 
+		"gainChance" :
+		{	
+		},
+		"animation":{
+			"hit":[ "spells/ultramanmori/ultramanmori.def" ]
+		},
+		"flags" :
+		{
+			"damage": true,"negative" : true
+		},
+		"targetCondition" : {
+		},
+		"sounds": {
+			"cast": "land-of-light/spellace.wav"
+		},
+		"counters" : {
+		},
+		"graphics":
+		{
+		},
+		"levels" : {
+			"base":{
+				"power": 25,
+				"aiValue": 70,
+				"range" : "X",
+				"cost": 15, 
+				"description": "",
+				"battleEffects" : {
+					"directDamage" : {
+						"type":"core:damage",
+						"ignoreImmunity" : true
+					}
+				},
+				"targetModifier":{"smart":true}		
+			},
+			"none":
+			{		
+				"power": 25,
+				"aiValue": 70,
+				"range" : "X",
+				"cost": 15, 
+				"description": "",
+				"targetModifier":{"smart":true}		
+			},
+			"basic":
+			{ 
+				"power": 35,
+				"aiValue": 80,
+				"range" : "X",
+				"cost": 15, 
+				"description": "",
+				"targetModifier":{"smart":true}	
+			},
+			"advanced":
+			{	 
+				"power": 35,
+				"aiValue": 90,
+				"range" : "X",
+				"cost": 20, 
+				"description": "",
+				"targetModifier":{"smart":true}	
+			},
+			"expert":
+			{
+				"power": 35,
+				"aiValue": 100,
+				"range" : "X",
+				"cost": 20, 
+				"description": "",
+				"targetModifier":{"smart":true}	
+			}
+		}
+	}
+}	

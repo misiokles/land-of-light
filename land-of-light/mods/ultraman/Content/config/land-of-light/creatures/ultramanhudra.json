@@ -1,0 +1,220 @@
+{
+	"ultramanhudra":
+	{
+		"name" :
+		{
+			"plural" : "Ultra-Ancient-Warrior-Hudra",
+			"singular" : "Ultra-Ancient-Warrior-Hudra"
+		},
+		"description" : "{Extra Effect}\r\nAll enemy creatures -2 speed,-2 casts and -5 shots",
+		"faction" : "neutral",
+		"doubleWide" : false,
+		"special":true,
+		"advMapAmount" :
+		{
+			 "min" : 1,
+			 "max" : 2
+		},
+		"level" : 10,
+		"attack" : 40,
+		"defense" : 40,
+		"damage" :
+		{
+			 "min" : 65,
+			 "max" : 85
+		},
+		"growth" : 1,
+		"hitPoints" : 1000,
+		"speed" : 20,
+		"fightValue" : 101899,
+		"aiValue" :81505,
+		"cost" :
+		{
+			"gold" : 90000,
+			"wood": 20,
+            "mercury": 15,
+            "ore": 20, 
+			"sulfur": 15,
+            "crystal": 15,
+            "gems": 15
+		},
+		"graphics" :
+		{
+			"animation" : "creatures/battle/hudra.def",
+			"map" : "creatures/map/maphudra.def",
+			"iconSmall" : "creatures/iconsSmall/hudra_small.bmp",
+			"iconLarge" : "creatures/iconsBig/hudra_big.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1,
+				"attack" : 1.2,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "land-of-light/attcktaro.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "LTITKILL.wav",
+			"move": "LTITMOVE.wav",
+			"wince": "LTITWNCE.wav"
+        },
+		"abilities" :
+		{
+			"HPregenerate" : {
+				"type" : "HP_REGENERATION",
+				"val" : 700
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 4
+			},
+			"nonLiving" : 
+			{
+				"type" : "GARGOYLE"
+			},
+			"noFear" : 
+			{
+				"type" : "FEARLESS"
+			},
+			"RECEPTIVE" :	
+			{	
+				"type" : "RECEPTIVE"	
+			},
+			"casts" :
+			{
+				"type" : "CASTS",
+				"val" : 10,
+				"valueType" : "INDEPENDENT_MAX"
+			},
+			"nomagic" :
+			{
+				"type" : "CHANGES_SPELL_COST_FOR_ENEMY",
+				"val" : 30
+			},
+			"slowspeed":
+			{
+				"type": "STACKS_SPEED",
+				"val" : -2,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"nocast":
+			{
+				"type": "CASTS",
+				"val" : -2,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"noshoot":
+			{
+				"type": "SHOTS",
+				"val" : -5,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
+			},
+			"nomana" :{
+				"type" : "MANA_DRAIN",	
+				"val" : 30	
+			},
+			"castBless":
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.bless",
+				"val" : 75,
+				"addInfo" : [3,0]
+			},
+			"caststoneSkin":
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.shield",
+				"val" : 75,
+				"addInfo" : [3,0]
+			},
+			"casthaste":
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.haste",
+				"val" : 75,
+				"addInfo" : [3,0]
+			},
+			"castFortune":
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.fortune",
+				"val" : 75,
+				"addInfo" : [3,0]
+			},
+			"castPrayer":
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.prayer",
+				"val" : 75,
+				"addInfo" : [3,0]
+			},
+			"castMirth":
+			{
+				"type" : "SPELL_BEFORE_ATTACK",
+				"subtype": "spell.mirth",
+				"val" : 75,
+				"addInfo" : [3,0]
+			}
+		},
+		"stackExperience" :
+ 
+		[
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.attack"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primarySkill.defence"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},	
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMin"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageMax"
+				},
+				"values" : [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+			},
+			{
+				"bonus" :
+				{
+					"valueType" : "PERCENT_TO_BASE",
+					"type" : "STACK_HEALTH"
+				},
+				"values" : [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [ 0, 1, 1, 1, 2, 2, 2, 4, 4, 4]
+			}
+		]
+	}
+}
