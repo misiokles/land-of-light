@@ -95,7 +95,9 @@
 			},
 			"noFear" : 
 			{
-				"type" : "FEARLESS"
+				"type" : "FEARFUL",
+				"valueType" : "INDEPENDENT_MIN",
+				"val" : 0
 			},
 			"RECEPTIVE" :	
 			{	

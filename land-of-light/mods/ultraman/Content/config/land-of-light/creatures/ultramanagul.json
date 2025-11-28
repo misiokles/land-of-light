@@ -100,7 +100,9 @@
 			},
 			"noFear" : 
 			{
-				"type" : "FEARLESS"
+				"type" : "FEARFUL",
+				"valueType" : "INDEPENDENT_MIN",
+				"val" : 0
 			},
 			"RECEPTIVE" :	
 			{	
@@ -239,7 +241,7 @@
 			},
 			"debuff7":
 			{ 
-				"propagator": "PLAYER_PROPAGATOR",
+				"propagator": "PLAYER",
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "spellSchool.water",
 				"val" : 50

@@ -37,7 +37,6 @@
 			{
 				"description" : "{Summon Ultraman-Gaia}\r\n\r\nSummons Ultraman-Gaia at the beginning of the battle.",
 				"power" : 100,
-				"aiValue" : 10,
 				"cost" : 0,
 				"range" : "X",
 				"targetModifier" :{"smart" :true},
@@ -48,7 +47,7 @@
 						"permanent" :false,
 						"summonByHealth" : true,
 						"type" :"core:summon",
-						"maxFullUnits" : 5
+//						"maxFullUnits" : 5
 					}
 				}
 			},

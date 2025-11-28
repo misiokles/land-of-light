@@ -5,7 +5,8 @@
 		"slot" : "MISC",
 		"class" : "SPECIAL",
 		"value" : 40000,
-		"bonuses" : [
+		"bonuses" : {
+			"openingSpell" :
 			{
 				"type" : "OPENING_BATTLE_SPELL",
 				"subtype" : "spell.ultramansm2",
@@ -14,10 +15,12 @@
 					"noneOf",
 					{
 						"type":"HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.ultramancurse"]
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL", 
+						"bonusSubtype" : "spell.ultramancurse"
 					}
 				]
 			},
+			"spellBeforeAttack" :
 			{
 				"type" : "SPELL_BEFORE_ATTACK",
 				"subtype": "spell.ultramancurse",
@@ -25,20 +28,21 @@
 				"addInfo" : [3,0],
 				"limiters" : [
 					{
-						"parameters" : ["ultramangaia"],
+						"creature" : "ultramangaia",
 						"type" : "CREATURE_TYPE_LIMITER"
 					}
 				]
 			},
+			"specialUpgrade" :
             { 
                 "addInfo" : "creature.ultramangaia",
 				"type" : "SPECIAL_UPGRADE",
                 "subtype" : "creature.ultramangaiaorg" 
             }
-		],
+		},
 		"graphics" : {
 			"image" : "land-of-light/objects/artifacts/ultramanatfm2",
-			"large" : "land-of-light/objects/artifacts/ultramanatfb2",
+			"scenarioBonus" : "land-of-light/objects/artifacts/ultramanatfb2",
 			"map" : "land-of-light/objects/artifacts/ultramanatfd2.def"
 		},
 		"text" : {

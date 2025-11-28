@@ -37,7 +37,6 @@
 				"cost": 1, 
 				"description": "",
 				"power": 1,
-				"aiValue": 70,
 				"range" : "x",
 				"targetModifier":{"smart":true},
 				"battleEffects":{

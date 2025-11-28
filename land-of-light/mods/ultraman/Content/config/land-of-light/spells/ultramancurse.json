@@ -37,7 +37,6 @@
 				"cost": 15, 
 				"description": "",
 				"power": 25,
-				"aiValue": 70,
 				"battleEffects":{
 					"timed":{
 						"type":"core:timed",
